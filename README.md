@@ -1,58 +1,51 @@
-# CASE 001 — The Institute of Unnecessary Complexity
+# I/U/C — CASE 001: THE COLLIDER
 
-An interactive, cinematic investigation into the apparently profound relationship between a ham-and-cheese toastie and pension member communications.
+A deliberately excessive, cinematic research environment about an ordinary ham-and-cheese toastie and the problem of communicating pensions clearly.
 
-## What this is
+## Deploy to GitHub Pages
 
-A **single coherent experience**, not a dashboard or a collection of pretend tools:
+1. Extract **the contents** of this folder into a repository (put `index.html` in its root).
+2. Go to **Settings → Pages**.
+3. Set **Deploy from a branch**, choose `main`, `/ (root)` and Save.
+4. Open the published URL. No account credentials, build or backend required.
 
-- **Threshold:** an original shader-rendered sci-fi research artefact, responsive to pointer movement.
-- **Information:** drag the density control and watch a literal field of communication jargon give way to one useful message.
-- **Timing:** rotate through five delivery moments and observe why the same message lands differently.
-- **Action:** remove competing calls to action in a functional editing experiment.
-- **The artefact:** a cinematic, photorealistic reveal of the original inspiration.
-- **Findings:** a deliberately plain conclusion and a working copy-to-clipboard action.
+The app uses **ES modules**, so running it locally requires an HTTP server, not double-clicking `index.html` on `file://`:
 
-Optional synthesised ambient audio, native scrolling, reduced-motion support, keyboard focus styles, original WebGL shader graphics and responsive layouts down to 320px.
-
-## GitHub Pages (no build step)
-
-1. Upload all the files **inside this folder** to the root of a public GitHub repository. Keep the `assets` directory beside `index.html`.
-2. On GitHub choose **Settings → Pages → Build and deployment → Deploy from a branch**.
-3. Select **main** and **/(root)**. Save.
-4. Open the published `https://YOUR-USERNAME.github.io/YOUR-REPO/` URL.
-
-You can also preview locally with `python -m http.server 8000` in this folder and open `http://localhost:8000`.
-
-No npm dependencies, CDNs, trackers, service workers, accounts, APIs or backend. Everything uses local source files and system typography. Compatible browsers use original WebGL2 shaders; others receive an atmospheric CSS fallback. The site works on HTTPS GitHub Pages, including subpath deployments (all links are relative).
-
-## Structure
-
-```
-index.html              Narrative, semantic content and controls
-assets/style.css        Design system, layouts, motion, mobile breakpoints
-assets/world.js         Original GPU-rendered procedural 3D world
-assets/app.js           Story state, interactions, accessibility and audio
-assets/reveal.webp      Original AI-generated cinematic image
-assets/reveal.png       High-quality fallback/source image
-assets/noise.svg        Procedural grain overlay
-assets/mark.svg         Favicon
+```bash
+python -m http.server 8000
+# open http://localhost:8000
 ```
 
-## Approach and claims
+## What's actually working
 
-The experience is **satirical**. The experiments illustrate qualitative communication principles; they are not calibrated to actual member data or behavioural evidence. No fake KPIs, probability scores, predictive models, or statistical claims. No member data is collected. There are no cookies, analytics or outbound network requests.
+- **The Field:** a spatially projected, navigable universe of 1,440 deterministic synthetic member agents. Orbit by dragging, zoom by wheel or touch gestures, inspect individuals by clicking or tapping lights.
+- **Transmission:** edit an actual message, compute word count and transparent language heuristics, choose channel, timing, audience, competing-message intensity and attention pressure. The simulation uses those specific settings.
+- **Transmission wave:** a signal propagates through the field; individual agents actually transition through *encountered → read → understood → acted*, with seeded variation. The same people persist between experiments.
+- **Observatory:** actual counts, per-cohort outcomes and funnel visualisation; replay and manual time scrubbing. Controlled counterfactual with exactly the same seeded population, and a side-by-side cosmic view. Export a reproducible JSON report, share a link encoding the input configuration, export a cinematic PNG poster, or capture an eight-second video of the live canvas in browsers supporting MediaRecorder.
+- **The Artefact:** trigger the declassification sequence and reveal a high-quality toastie photograph. The final joke is the difference between the complexity of the investigation and the simplicity of its findings.
+- **UX infrastructure:** responsive desktop/mobile layouts, portrait-mode navigation, accessible text equivalents, optional procedural Web Audio, command palette (`/` or Ctrl/⌘+K), keyboard shortcuts `1`–`4`, reduced-motion support, no cookies, no tracking, no external API calls.
 
-The visual system uses browser-native WebGL2 rather than scroll-hijacking plugins. The story follows the normal document scroll, with a shader layer transitioning between chapters and native range inputs for touch, mouse and keyboard control.
+## Important limitation
 
-## Accessibility / performance
+This is a **toy model**, not a calibrated predictive tool. The people are fictional agents. The behaviours, probabilities, cohort differences and interpretation are invented for an interactive thought experiment, not evidence-based estimates of pension members' behaviour. Do not use its outputs for real communications or investment decisions.
 
-- `prefers-reduced-motion` disables nonessential CSS motion and shader time progression.
-- All actions are native buttons, links or labelled range inputs.
-- Ambient sound starts **only** after explicit opt-in.
-- Shader resolution caps device pixel ratio to prioritise mobile GPUs.
-- On devices without WebGL2, narrative and interactions remain functional.
+Text simplification uses explicit fixed rules. It is **not** an AI service or a general rewriting model. The web fonts are loaded from Google Fonts as progressive enhancement; system font fallbacks work when offline. Everything else is local.
 
-## Acknowledgement
+## Technical layout
 
-Image asset commissioned for this project. All source code and CSS are original. Typography uses the visitor’s native system fonts.
+```
+index.html             App structure / accessible controls
+style.css              responsive design, glass, motion
+js/app.js              navigation, interactions, exports and audio
+js/simulation.js       seeded agents, transparent language heuristic and model
+js/engine.js           canvas spatial renderer, camera and live signal physics
+assets/artefact.webp   locally bundled original cinematic toastie photography
+assets/icon.svg        I/U/C icon
+.nojekyll              GitHub Pages static deployment convenience
+```
+
+### Tune the simulation
+
+Open `js/simulation.js`: `SEGMENTS` defines archetypes; `makePopulation` generates the same 1,440 people from seed 71219; `analyseMessage` uses readable heuristics; `evaluate` contains all probability gates. `progressFor` drives each person’s wave-delayed visible state. Modelling and rendering deliberately remain separated.
+
+© Fictional Institute of Unnecessary Complexity. No affiliation with any pension scheme or real research institution.
