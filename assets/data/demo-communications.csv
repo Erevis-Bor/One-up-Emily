@@ -1,0 +1,49 @@
+cohort,channel,sent,opened,understood,acted
+"Early career","Email",260,125,71,22
+"Early career","Email",289,145,86,28
+"Early career","Email",318,167,103,35
+"Early career","Printed letter",306,152,85,27
+"Early career","Printed letter",335,174,102,34
+"Early career","Printed letter",364,198,121,42
+"Early career","Portal",352,181,100,33
+"Early career","Portal",381,205,118,40
+"Early career","Portal",410,230,138,49
+"Early career","Text message",398,211,115,39
+"Early career","Text message",427,237,135,47
+"Early career","Text message",456,263,156,57
+"Mid career","Email",335,175,106,36
+"Mid career","Email",364,198,125,45
+"Mid career","Email",393,223,146,54
+"Mid career","Printed letter",381,205,123,43
+"Mid career","Printed letter",410,230,143,52
+"Mid career","Printed letter",439,257,166,63
+"Mid career","Portal",427,237,140,51
+"Mid career","Portal",456,264,162,61
+"Mid career","Portal",485,292,186,72
+"Mid career","Text message",473,271,158,58
+"Mid career","Text message",502,299,181,70
+"Mid career","Text message",531,329,207,82
+"Pre-retirement","Email",410,231,148,56
+"Pre-retirement","Email",439,258,172,67
+"Pre-retirement","Email",468,285,197,80
+"Pre-retirement","Printed letter",456,265,168,65
+"Pre-retirement","Printed letter",485,293,193,77
+"Pre-retirement","Printed letter",514,322,220,91
+"Pre-retirement","Portal",502,300,188,74
+"Pre-retirement","Portal",531,330,214,87
+"Pre-retirement","Portal",560,361,243,103
+"Pre-retirement","Text message",548,337,208,84
+"Pre-retirement","Text message",577,368,236,98
+"Pre-retirement","Text message",606,401,267,115
+"Retired","Email",485,294,199,81
+"Retired","Email",514,323,227,96
+"Retired","Email",543,354,257,112
+"Retired","Printed letter",531,331,222,93
+"Retired","Printed letter",560,362,251,108
+"Retired","Printed letter",589,394,283,126
+"Retired","Portal",577,369,244,104
+"Retired","Portal",606,402,276,122
+"Retired","Portal",635,436,310,141
+"Retired","Text message",623,409,267,116
+"Retired","Text message",652,443,300,135
+"Retired","Text message",681,479,336,156

@@ -1,0 +1,13 @@
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 620 540" fill="none"><ns0:defs>
+  <ns0:linearGradient id="top" x1=".12" y1="0" x2=".9" y2="1" objectBoundingBox="true"><ns0:stop stop-color="#fbe4a6" /><ns0:stop offset=".35" stop-color="#dca65d" /><ns0:stop offset=".76" stop-color="#ba753e" /><ns0:stop offset="1" stop-color="#724121" /></ns0:linearGradient>
+  <ns0:linearGradient id="crust" x1="0" x2="1" y1="0" y2="1"><ns0:stop stop-color="#d9a053" /><ns0:stop offset=".6" stop-color="#75462c" /><ns0:stop offset="1" stop-color="#3e261c" /></ns0:linearGradient>
+  <ns0:linearGradient id="ham" x1="0" x2="1" y1="0" y2="1"><ns0:stop stop-color="#ffa9a1" /><ns0:stop offset="1" stop-color="#9e4056" /></ns0:linearGradient>
+  <ns0:linearGradient id="cheese" x1="0" x2="1" y1="0" y2="1"><ns0:stop stop-color="#ffe99b" /><ns0:stop offset=".5" stop-color="#ffd364" /><ns0:stop offset="1" stop-color="#ea943b" /></ns0:linearGradient>
+  <ns0:linearGradient id="bottom" x1="0" x2="1" y1="0" y2="1"><ns0:stop stop-color="#ecb674" /><ns0:stop offset="1" stop-color="#815033" /></ns0:linearGradient>
+  <ns0:filter id="shadow" x="-.4" y="-.5" width="1.8" height="2"><ns0:feGaussianBlur stdDeviation="21" /></ns0:filter>
+  <ns0:filter id="glow" x="-.3" y="-.3" width="1.6" height="1.6"><ns0:feGaussianBlur stdDeviation="12" /></ns0:filter>
+  <ns0:pattern id="grain" patternUnits="userSpaceOnUse" width="29" height="31"><ns0:circle cx="3" cy="5" r="1.4" fill="#41241d" opacity=".38" /><ns0:circle cx="18" cy="13" r="2.2" fill="#492919" opacity=".28" /><ns0:circle cx="25" cy="27" r=".9" fill="#fce6ac" opacity=".6" /><ns0:circle cx="9" cy="25" r="1.1" fill="#492919" opacity=".28" /></ns0:pattern>
+</ns0:defs>
+<ns0:g id="bread-base"><ns0:path d="M97 306 274 404Q303 421 337 405L527 302 531 331Q531 345 514 354L338 451Q309 467 276 450L108 356Q91 347 91 333Z" fill="url(#crust)" stroke="#5b3323" stroke-width="4" /><ns0:path d="M103 299 273 389Q307 407 339 389L519 293Q532 299 531 315 532 322 515 332L337 431Q306 448 275 429L104 332Q93 326 95 314Z" fill="url(#bottom)" stroke="#ae7142" stroke-width="3" /></ns0:g>
+
+</ns0:svg>

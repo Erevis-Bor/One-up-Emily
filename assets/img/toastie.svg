@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 540" fill="none">
+<defs>
+  <linearGradient id="top" x1=".12" y1="0" x2=".9" y2="1" objectBoundingBox="true"><stop stop-color="#fbe4a6"/><stop offset=".35" stop-color="#dca65d"/><stop offset=".76" stop-color="#ba753e"/><stop offset="1" stop-color="#724121"/></linearGradient>
+  <linearGradient id="crust" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#d9a053"/><stop offset=".6" stop-color="#75462c"/><stop offset="1" stop-color="#3e261c"/></linearGradient>
+  <linearGradient id="ham" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#ffa9a1"/><stop offset="1" stop-color="#9e4056"/></linearGradient>
+  <linearGradient id="cheese" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#ffe99b"/><stop offset=".5" stop-color="#ffd364"/><stop offset="1" stop-color="#ea943b"/></linearGradient>
+  <linearGradient id="bottom" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#ecb674"/><stop offset="1" stop-color="#815033"/></linearGradient>
+  <filter id="shadow" x="-.4" y="-.5" width="1.8" height="2"><feGaussianBlur stdDeviation="21"/></filter>
+  <filter id="glow" x="-.3" y="-.3" width="1.6" height="1.6"><feGaussianBlur stdDeviation="12"/></filter>
+  <pattern id="grain" patternUnits="userSpaceOnUse" width="29" height="31"><circle cx="3" cy="5" r="1.4" fill="#41241d" opacity=".38"/><circle cx="18" cy="13" r="2.2" fill="#492919" opacity=".28"/><circle cx="25" cy="27" r=".9" fill="#fce6ac" opacity=".6"/><circle cx="9" cy="25" r="1.1" fill="#492919" opacity=".28"/></pattern>
+</defs>
+<ellipse cx="319" cy="454" rx="218" ry="33" fill="#000" opacity=".35" filter="url(#shadow)"/>
+<g id="sandwich" stroke-linejoin="round">
+<!-- Bread bottom -->
+<g id="bread-base"><path d="M97 306 274 404Q303 421 337 405L527 302 531 331Q531 345 514 354L338 451Q309 467 276 450L108 356Q91 347 91 333Z" fill="url(#crust)" stroke="#5b3323" stroke-width="4"/><path d="M103 299 273 389Q307 407 339 389L519 293Q532 299 531 315 532 322 515 332L337 431Q306 448 275 429L104 332Q93 326 95 314Z" fill="url(#bottom)" stroke="#ae7142" stroke-width="3"/></g>
+<!-- melted cheese -->
+<g id="cheese-layer"><path d="M94 277 275 370Q304 390 338 373L531 273 542 298Q542 311 527 319L336 423Q307 439 273 419L96 323Q80 315 86 298Z" fill="url(#cheese)" stroke="#a56a28" stroke-width="3"/><path d="M171 327C172 349 167 363 181 363S194 341 192 337" fill="#ffc861" stroke="#d1943a" stroke-width="3"/><path d="M354 382C354 408 361 425 371 413S380 386 377 370" fill="#ffd66e" stroke="#d1943a" stroke-width="3"/><path d="M462 330C467 353 478 371 490 350L490 323" fill="#ffd66e" stroke="#d1943a" stroke-width="3"/></g>
+<!-- ham -->
+<g id="ham-layer"><path d="M108 245 278 339Q306 355 335 339L510 245 534 264 519 284 338 385Q309 403 274 381L89 281Z" fill="url(#ham)" stroke="#a85962" stroke-width="4"/><path d="m126 258 146 83q40 21 77 0l149-82" stroke="#ffd4c5" opacity=".65" stroke-width="4" stroke-linecap="round"/><path d="M151 281c22 2 25 16 52 15M370 348c15-13 31-7 50-21" stroke="#8d3e55" stroke-width="3" opacity=".5"/></g>
+<!-- Toast top -->
+<g id="bread-top"><path d="M99 203Q91 188 115 174L269 88Q305 70 346 90L508 177Q529 188 530 208L532 247Q530 259 510 271L344 364Q307 384 274 365L107 273Q85 260 87 243Z" fill="url(#crust)" stroke="#4a291e" stroke-width="5"/><path d="M98 188Q99 178 117 168L271 85Q305 68 348 89L508 173Q535 188 524 206Q521 211 507 220L338 316Q309 332 279 316L111 221Q90 210 98 188Z" fill="url(#top)" stroke="#f4cc85" stroke-width="6"/><path d="M98 188Q99 178 117 168L271 85Q305 68 348 89L508 173Q535 188 524 206Q521 211 507 220L338 316Q309 332 279 316L111 221Q90 210 98 188Z" fill="url(#grain)" opacity=".65"/><path d="M156 189 279 118Q309 103 343 118L463 184 336 263Q309 279 281 262Z" fill="#985627" opacity=".48"/><path d="M173 188 281 130Q309 117 337 132L442 187 333 249Q305 263 283 248Z" fill="#e5a354" opacity=".55"/><path d="m199 189 90-48M217 206l106-56M257 228l97-57M293 247l94-54" stroke="#79401f" stroke-width="6" opacity=".42" stroke-linecap="round"/><path d="M98 188Q99 178 117 168L271 85Q305 68 348 89L508 173Q535 188 524 206" stroke="#ffe8b4" stroke-width="4" opacity=".5"/></g>
+</g>
+</svg>
