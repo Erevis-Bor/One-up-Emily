@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="900" viewBox="0 0 1500 900">
+<defs>
+ <radialGradient id="a"><stop stop-color="#4a9b9b" stop-opacity=".29"/><stop offset=".42" stop-color="#1e4b57" stop-opacity=".10"/><stop offset="1" stop-color="#091119" stop-opacity="0"/></radialGradient>
+ <linearGradient id="blade" x1="0" y1="0" x2="1" y2=".85"><stop stop-color="#071016"/><stop offset=".22" stop-color="#374d4d"/><stop offset=".32" stop-color="#0d2025"/><stop offset=".67" stop-color="#08151e"/><stop offset=".84" stop-color="#394945"/><stop offset="1" stop-color="#040a10"/></linearGradient>
+ <linearGradient id="facet" x1="0" y1="0" x2="1" y2=".24"><stop stop-color="#70c6bd" stop-opacity=".4"/><stop offset=".25" stop-color="#162a33"/><stop offset=".58" stop-color="#070f17"/><stop offset=".81" stop-color="#283b3e"/><stop offset="1" stop-color="#c2e8df" stop-opacity=".15"/></linearGradient>
+ <linearGradient id="ring"><stop stop-color="#69cdb6" stop-opacity="0"/><stop offset=".25" stop-color="#82d4cc" stop-opacity=".5"/><stop offset=".55" stop-color="#d3f3e3" stop-opacity=".85"/><stop offset=".8" stop-color="#659c97" stop-opacity=".22"/><stop offset="1" stop-color="#bdebd2" stop-opacity="0"/></linearGradient>
+ <radialGradient id="glow"><stop stop-color="#b6ffee" stop-opacity=".52"/><stop offset=".10" stop-color="#a6f3db" stop-opacity=".12"/><stop offset="1" stop-color="#74dbc7" stop-opacity="0"/></radialGradient>
+ <filter id="blur"><feGaussianBlur stdDeviation="17"/></filter><filter id="beam"><feGaussianBlur stdDeviation="3"/></filter><filter id="blurBig"><feGaussianBlur stdDeviation="70"/></filter>
+ <pattern id="brushed" width="2" height="11" patternUnits="userSpaceOnUse"><path d="M0 1H2M0 6H2" stroke="#d9f2ef" stroke-opacity=".03" stroke-width=".4"/></pattern>
+ <linearGradient id="trail"><stop stop-color="#aadace" stop-opacity="0"/><stop offset=".5" stop-color="#dbf7e8" stop-opacity=".2"/><stop offset="1" stop-color="#b0eadf" stop-opacity="0"/></linearGradient>
+ </defs>
+ <ellipse cx="1050" cy="462" rx="430" ry="435" fill="url(#a)"/>
+ <ellipse cx="1040" cy="460" rx="260" ry="440" fill="#71f0d2" opacity=".11" filter="url(#blurBig)"/>
+ <g opacity=".65" fill="none" stroke="#8ebcb6" stroke-width=".6"><path d="M630 463H1430M1034 35V871" opacity=".20"/><circle cx="1034" cy="460" r="315" stroke-dasharray="2 10" opacity=".4"/><circle cx="1034" cy="460" r="390" stroke-dasharray="1 19" opacity=".21"/><path d="M727 444h18m576 0h18M1034 140v18m0 604v18" opacity=".8"/></g>
+ <g fill="none" transform="translate(1034 455) rotate(-21)">
+  <ellipse rx="411" ry="111" stroke="#adf4e2" opacity=".45" filter="url(#blur)" stroke-width="6"/>
+  <ellipse rx="408" ry="109" stroke="url(#ring)" stroke-width="2.2"/>
+  <ellipse rx="408" ry="109" stroke="#91d5cb" stroke-width=".4" stroke-dasharray="2 9" opacity=".65"/>
+  <ellipse rx="240" ry="365" transform="rotate(58)" stroke="#b3f5e3" stroke-width="3" opacity=".25" filter="url(#beam)"/>
+  <ellipse rx="240" ry="365" transform="rotate(58)" stroke="url(#ring)" stroke-width="1.3" opacity=".63"/>
+ </g>
+ <g opacity=".50"><path d="M820 195L1280 740" stroke="url(#trail)" stroke-width=".6"/><path d="M730 450L1350 450" stroke="url(#trail)" stroke-width=".5"/><path d="M1034 90L1034 850" stroke="url(#trail)" stroke-width=".5"/></g>
+ <g transform="translate(1044 464) rotate(13)">
+  <rect x="-112" y="-264" width="224" height="528" rx="27" fill="#87ecd2" opacity=".38" filter="url(#blur)"/>
+  <rect x="-111" y="-262" width="222" height="524" rx="23" fill="url(#blade)" stroke="#88c8c0" stroke-opacity=".47" stroke-width="1.8"/>
+  <rect x="-103" y="-255" width="206" height="510" rx="19" fill="url(#facet)" opacity=".80"/>
+  <rect x="-99" y="-251" width="198" height="502" rx="18" fill="url(#brushed)"/>
+  <path d="M-82-239H75Q88-239 89-225V223Q89 236 74 237H-82" fill="none" stroke="#baded6" stroke-opacity=".23" stroke-width="1.1"/>
+  <path d="M-102-229V225Q-100 249-80 253" stroke="#b5f9e0" stroke-width="2" opacity=".36" fill="none"/>
+  <rect x="-60" y="-191" width="120" height="380" rx="9" fill="#071018" opacity=".82" stroke="#9acbc3" stroke-opacity=".4" stroke-width="1"/>
+  <rect x="-54" y="-187" width="108" height="370" rx="6" fill="#122430" opacity=".62"/>
+  <path d="M-42-157H42M-42 147H42" stroke="#a3cfc1" opacity=".38" stroke-width="1"/>
+  <path d="M0-50V50M-15 0H15" stroke="#c0f9e4" opacity=".22" stroke-width="1"/>
+  <circle r="37" fill="none" stroke="#abdacf" stroke-width=".75" opacity=".33"/><circle r="19" fill="none" stroke="#a8e8cc" stroke-width=".75" opacity=".55"/><circle r="2" fill="#e6ffef"/>
+  <path d="M-105-218V213" stroke="#ecfff5" opacity=".28" stroke-width="1"/>
+  <path d="M93-227V225" stroke="#bde7e0" opacity=".21" stroke-width="1"/>
+ </g>
+ <circle cx="729" cy="361" r="43" fill="url(#glow)"/><circle cx="1293" cy="580" r="54" fill="url(#glow)"/>
+ <g fill="#ceffed"><circle cx="729" cy="361" r="2.3"/><circle cx="1293" cy="580" r="1.5"/><circle cx="1060" cy="95" r="1.3"/></g>
+ <g font-family="monospace" font-size="11" letter-spacing="2" fill="#8fabae" opacity=".6"><text x="730" y="339">A / 07.339</text><text x="1310" y="604">N / 03.001</text><text x="1135" y="155">SOURCE // UNKNOWN</text></g>
+</svg>
