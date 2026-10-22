@@ -1,82 +1,96 @@
 <!doctype html>
 <html lang="en-GB">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="theme-color" content="#070a10">
-  <meta name="description" content="An almost offensively elaborate investigation into effective communication, originating with a ham and cheese toastie.">
-  <meta property="og:title" content="CASE 001 — The Institute of Unnecessary Complexity">
-  <meta property="og:description" content="We have spent an unreasonable amount of effort investigating a very ordinary lunch.">
-  <meta property="og:image" content="assets/reveal.png">
-  <title>CASE 001 — The Institute of Unnecessary Complexity</title>
-  <link rel="icon" type="image/svg+xml" href="assets/mark.svg">
-  <link rel="preload" href="assets/reveal.webp" as="image">
-  <link rel="stylesheet" href="assets/style.css">
-  <script defer src="assets/world.js"></script>
-  <script defer src="assets/app.js"></script>
+ <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="theme-color" content="#05070c">
+ <meta name="description" content="A fully interactive communications collider built to explain a ham and cheese toastie. An Institute of Unnecessary Complexity research environment.">
+ <meta property="og:title" content="CASE 001 — THE COLLIDER"><meta property="og:description" content="We simulated a universe to investigate a sandwich.">
+ <meta property="og:image" content="assets/artefact.webp">
+ <title>CASE 001 / THE COLLIDER — The Institute of Unnecessary Complexity</title>
+ <link rel="icon" href="assets/icon.svg" type="image/svg+xml"><link rel="preload" href="assets/artefact.webp" as="image">
+ <link rel="stylesheet" href="style.css">
+ <script type="module" src="js/app.js"></script>
 </head>
 <body>
-  <a class="skip" href="#threshold">Skip to experience</a>
-  <canvas id="world" aria-hidden="true"></canvas>
-  <div id="fallback-world" aria-hidden="true"></div>
-  <div class="screen-grain" aria-hidden="true"></div>
-  <div class="spotlight" aria-hidden="true"></div>
-  <div class="boot-overlay" id="boot" aria-hidden="true"><div class="boot-mark">I<span>⁄</span>U<span>⁄</span>C</div><div class="boot-line"><span></span></div><p>INITIALISING RESEARCH ENVIRONMENT</p></div>
-
-  <header class="topbar">
-    <a class="brand" href="#threshold" aria-label="Institute of Unnecessary Complexity, return to introduction"><span class="brand-symbol">I<span>/</span>U<span>/</span>C<span class="brand-spark"></span></span><span class="brand-name">THE INSTITUTE OF<br>UNNECESSARY COMPLEXITY</span></a>
-    <div class="header-meta"><span class="live-pip"></span><span class="meta-status">RESEARCH STATUS: <b>ONGOING</b></span></div>
-    <div class="header-actions"><button id="sound-toggle" class="button-icon" type="button" aria-label="Enable ambient sound" aria-pressed="false"><span class="sound-icon">◖</span> <span class="sound-label">SOUND OFF</span></button><a class="header-case" href="#reveal">SKIP TO FINDINGS <span>↗</span></a></div>
+ <a href="#interface" class="skip">Skip to controls</a>
+ <canvas id="universe" aria-label="Live three-dimensional projection of simulated member responses"></canvas>
+ <div class="stage-vignette" aria-hidden="true"></div><div class="grain" aria-hidden="true"></div>
+ <div class="intro" id="intro">
+  <div class="intro-meta"><span class="hairpin">◈</span> I/U/C / EXPERIMENT 001 <span>EST. 12:43 PM · WEST YORKSHIRE</span></div>
+  <div class="intro-centre">
+    <div class="intro-eyebrow"><span class="blip"></span> A RESEARCH ENVIRONMENT OF DUBIOUS NECESSITY</div>
+    <h1>We built a universe<br>to investigate<br><em>a sandwich.</em></h1>
+    <p>1,440 simulated minds. A field of competing messages. One profoundly ordinary conclusion.<br>This is not a presentation. You are the experiment.</p>
+    <button class="start-btn" id="enter"><span>ENTER THE COLLIDER</span><span class="start-arrow">↗</span></button>
+  </div>
+  <div class="intro-bottom"><span>CASE FILE NO. 001 — CLASSIFICATION: UNNECESSARY</span><span>HEADPHONES RECOMMENDED, NOT REQUIRED</span></div>
+ </div>
+ <div id="app" class="app" aria-hidden="true">
+  <header class="header">
+   <button id="home" class="logo" aria-label="Return to field"><span class="logo-glyph">I<span>⁄</span>U<span>⁄</span>C</span><span class="logo-text">INSTITUTE OF<br>UNNECESSARY COMPLEXITY</span></button>
+   <div class="header-center"><span class="header-dot"></span><span>CASE 001 / THE COLLIDER</span><i></i><span id="system-status">SYSTEM IDLE</span></div>
+   <div class="header-right"><button class="header-control" id="sound" aria-label="Toggle sound" aria-pressed="false">◖ <span>SOUND OFF</span></button><button class="header-control" id="help">? <span>FIELD GUIDE</span></button><span class="phase-chip">RESEARCH BUILD <b>04</b></span></div>
   </header>
-
-  <nav class="chapter-index" aria-label="Experience chapters">
-    <a class="chapter-tick active" href="#threshold" aria-label="Introduction"><span>00</span><i></i><small>THRESHOLD</small></a>
-    <a class="chapter-tick" href="#signal" aria-label="Experiment one: information"><span>01</span><i></i><small>INFORMATION</small></a>
-    <a class="chapter-tick" href="#window" aria-label="Experiment two: timing"><span>02</span><i></i><small>TIMING</small></a>
-    <a class="chapter-tick" href="#action" aria-label="Experiment three: action"><span>03</span><i></i><small>ACTION</small></a>
-    <a class="chapter-tick" href="#reveal" aria-label="The reveal"><span>04</span><i></i><small>THE ARTEFACT</small></a>
-    <a class="chapter-tick" href="#findings" aria-label="Final findings"><span>05</span><i></i><small>FINDINGS</small></a>
+  <nav class="rail" id="interface" aria-label="Research modules">
+   <button data-view="field" class="rail-button selected" aria-label="Field" title="The Field"><span>01</span><b>THE FIELD</b></button>
+   <button data-view="transmit" class="rail-button" aria-label="Transmission" title="Transmission"><span>02</span><b>TRANSMISSION</b></button>
+   <button data-view="observe" class="rail-button" aria-label="Observatory" title="Observatory"><span>03</span><b>OBSERVATORY</b></button>
+   <button data-view="artefact" class="rail-button" aria-label="Artefact" title="Artefact"><span>04</span><b>THE ARTEFACT</b></button>
+   <div class="rail-filler"></div>
+   <button class="rail-button rail-utility" id="command" title="Quick navigation"><span>⌘</span><b>COMMANDS</b></button>
   </nav>
-  <div class="scroll-line" aria-hidden="true"><div id="progress-line"></div></div>
-
-  <main>
-    <section id="threshold" class="chapter chapter-hero" data-scene="0" aria-labelledby="hero-title">
-      <div class="hero-grid" aria-hidden="true"></div>
-      <div class="hero-topline reveal-in"><span><i class="tiny-square"></i> DEPARTMENT OF DISPROPORTIONATE RESEARCH</span><span>EST. 12:43 PM / SOMEWHERE IN YORKSHIRE</span></div>
-      <div class="hero-copy reveal-in">
-        <p class="section-kicker"><span class="seq-number">CASE FILE / 001</span> <span class="hairline"></span> <span>TOP SECRET. QUESTIONABLE NECESSITY.</span></p>
-        <h1 id="hero-title">A very ordinary<br><em>question.</em><br>An extraordinary<br><span class="type-outline">investigation.</span></h1>
-        <p class="hero-lead">There are problems that demand the full weight of modern technology. This is not one of them.</p>
-        <a class="primary-link" href="#signal"><span class="primary-icon">↘</span> <span>ENTER THE INVESTIGATION</span><span class="link-arrow">↗</span></a>
-      </div>
-      <div class="hero-object-caption" aria-hidden="true"><span class="marker-cross">+</span> FIG. 001<br><span>UNKNOWN OBJECT / UNDER OBSERVATION</span></div>
-      <div class="hero-bottom"><span>AN INTERACTIVE RESEARCH PROJECT<br>OF DEEPLY DUBIOUS IMPORTANCE</span><a href="#signal">SCROLL TO DECLASSIFY <span class="scroll-mouse">↓</span></a><span>OBJECTIVE: UNDERSTANDING<br>WHAT ACTUALLY MATTERS</span></div>
-    </section>
-
-    <section id="signal" class="chapter chapter-experiment" data-scene="1" aria-labelledby="signal-heading">
-      <div class="section-shell">
-        <div class="experiment-intro reveal-in"><div class="eyebrow"><span class="eyebrow-num">01 / 03</span><span class="eyebrow-bar"></span> THE INFORMATION EXPERIMENT</div><h2 id="signal-heading">More information.<br><em>Less understanding.</em></h2><p class="body-intro">Observe what happens when an organisation attempts to demonstrate the full sophistication of its internal communication capabilities.</p></div>
-        <div class="experiment-layout signal-layout">
-          <div class="control-surface glass reveal-in"><div class="surface-top"><span>EXPERIMENT 001</span><span class="surface-led">● LIVE MANIPULATION</span></div><p class="control-label">INFORMATION DENSITY</p><div class="big-reading"><span id="density-value">100</span><span class="unit">%</span></div><input id="density" class="range" aria-label="Information density" type="range" min="0" max="100" value="100" step="1"><div class="range-ends"><span>ESSENTIAL ONLY</span><span>EVERYTHING WE KNOW</span></div><div class="inference" id="density-inference"><span class="inference-icon">↗</span><div><b>OBSERVATION</b><p>Somewhere in here is something a member needs to do.</p></div></div></div>
-          <div class="signal-visual reveal-in" id="signal-visual" aria-label="An interactive field of communication messages that becomes clearer as information density falls"><div class="scanner-line"></div><div class="signal-overlay-label">LIVE DECOMPOSITION <span>↗</span></div><div class="signal-babble" id="babble" aria-hidden="true"></div><div class="signal-core" id="signal-core"><small>THE ACTUAL MESSAGE</small><p>Check your<br>beneficiaries.</p><span>ONE USEFUL THING. ZERO FOOTNOTES.</span></div><div class="signal-coord">X 028.009 / Y 001.203<br>FILTER: <span id="filter-status">DISABLED</span></div></div>
-        </div>
-        <p class="section-footnote"><span>↳</span> THIS EXPERIMENT CONTAINS NO ACTUAL PENSION DATA. THE INSTITUTE IS NOT THAT IRRESPONSIBLE.</p>
-      </div>
-    </section>
-
-    <section id="window" class="chapter chapter-experiment" data-scene="2" aria-labelledby="window-heading">
-      <div class="section-shell">
-        <div class="experiment-intro reveal-in"><div class="eyebrow"><span class="eyebrow-num">02 / 03</span><span class="eyebrow-bar"></span> THE TEMPORAL EXPERIMENT</div><h2 id="window-heading">A perfect message.<br><em>At the wrong time.</em></h2><p class="body-intro">Same message. Same member. Five different moments. Explore the distance between technically communicating and actually being helpful.</p></div>
-        <div class="timing-stage reveal-in"><div class="orbit-visual" id="orbit-visual" aria-hidden="true"><div class="orbit-rim"></div><div class="orbit-rim orbit-rim--outer"></div><div class="orbit-cross horizontal"></div><div class="orbit-cross vertical"></div><div class="orbit-dot" id="orbit-dot"></div><span class="orbit-centre-label">DECISION<br>POINT</span><span class="orbit-degree">T − 00:00</span></div><div class="timing-panel glass"><div class="surface-top"><span>TEMPORAL ALIGNMENT / TEST 002</span><span class="surface-led">● ACTIVE</span></div><span class="control-label">MESSAGE ARRIVAL RELATIVE TO DECISION</span><div class="timing-output"><span id="timing-date">3 WEEKS BEFORE</span><strong id="timing-status" class="timing-status">THE RIGHT MOMENT.</strong><p id="timing-explainer">Enough time to act. Close enough to matter.</p></div><div class="timeline-body"><input id="timing" class="range timing-range" aria-label="When the member receives the communication" type="range" min="0" max="4" value="2" step="1"><div class="timeline-labels"><span>6 MONTHS<br>EARLY</span><span>6 WEEKS<br>EARLY</span><span>3 WEEKS<br>BEFORE</span><span>1 WEEK<br>AFTER</span><span>6 MONTHS<br>LATE</span></div></div><div class="timing-message"><span class="mail-icon">↗</span><div><small>MESSAGE TRANSMITTED</small><p>Explore your retirement options.</p></div><span class="mail-flag" id="mail-flag">RELEVANT</span></div></div></div>
-      </div>
-    </section>
-
-    <section id="action" class="chapter chapter-experiment" data-scene="3" aria-labelledby="action-heading"><div class="section-shell"><div class="experiment-intro reveal-in"><div class="eyebrow"><span class="eyebrow-num">03 / 03</span><span class="eyebrow-bar"></span> THE BEHAVIOURAL EXPERIMENT</div><h2 id="action-heading">All these options.<br><em>One next step.</em></h2><p class="body-intro">The institute's research team has helpfully provided three calls to action. Two are competing for attention. Decide which ones don't belong.</p></div><div class="action-workbench reveal-in"><div class="bench-header"><span>INTERFACE / MEMBER VIEW</span><span id="action-counter">03 ACTIVE DIRECTIVES</span></div><div class="choice-list" id="choice-list"><div class="choice" data-choice="0"><span class="choice-no">01</span><div><small>INFORMATION PORTAL</small><strong>Read the full 84-page member handbook.</strong><span class="choice-description">Complete with 17 appendices.</span></div><button class="choice-remove" data-remove="0" aria-label="Remove the member handbook action">REMOVE <span>×</span></button></div><div class="choice" data-choice="1"><span class="choice-no">02</span><div><small>GOVERNANCE UPDATE</small><strong>Review the scheme's latest policy framework.</strong><span class="choice-description">Important to somebody, presumably.</span></div><button class="choice-remove" data-remove="1" aria-label="Remove the policy framework action">REMOVE <span>×</span></button></div><div class="choice" data-choice="2"><span class="choice-no">03</span><div><small>YOUR NEXT STEP</small><strong>Check your beneficiaries.</strong><span class="choice-description">One clear action you can take today.</span></div><button class="choice-remove" data-remove="2" aria-label="Remove the beneficiary action">REMOVE <span>×</span></button></div></div><div class="bench-footer"><div class="action-readout"><small>COMMUNICATION FOCUS</small><div class="meter"><div id="focus-meter"></div></div><span id="focus-label">DILUTED / MULTIPLE PRIORITIES</span></div><button id="restore-actions" class="tertiary-button">↶ RESET EXPERIMENT</button></div></div><div id="decision-result" class="decision-result" role="status" aria-live="polite"><span>THE SIGNAL IS GETTING CLEARER.</span></div></div></section>
-
-    <section id="reveal" class="chapter chapter-reveal" data-scene="4" aria-labelledby="reveal-heading"><div class="reveal-photo" role="img" aria-label="Cinematic photograph of a toasted ham and cheese sandwich, steaming on a dark stone plinth"></div><div class="reveal-vignette"></div><div class="reveal-top"><span class="eyebrow">04 / THE ARTEFACT</span><span>CLASSIFICATION: DECLASSIFIED</span></div><div class="reveal-main"><div class="reveal-prefix">AFTER EXTENSIVE RESEARCH, WE HAVE IDENTIFIED THE SOURCE OF THE ENTIRE INVESTIGATION.</div><h2 id="reveal-heading">A ham &amp; cheese<br><em>toastie.</em></h2><p>Estimated research expenditure: one lunch.<br>Original insight: distressingly straightforward.</p></div><div class="reveal-lower"><span>FIG. 001 / SUBJECT IN ORIGINAL CONDITION</span><span>NO SANDWICHES WERE DIGITALLY TRANSFORMED</span></div></section>
-
-    <section id="findings" class="chapter chapter-findings" data-scene="5" aria-labelledby="findings-heading"><div class="section-shell findings-shell"><div class="findings-intro reveal-in"><div class="eyebrow"><span class="eyebrow-num">FINAL REPORT</span><span class="eyebrow-bar"></span> BOARD-APPROVED ADVICE FROM A SANDWICH</div><h2 id="findings-heading">The findings were<br><em>remarkably ordinary.</em></h2><p>We built an unnecessarily sophisticated investigation to arrive at a conclusion that probably should have fitted on a Post-it.</p></div><div class="findings-list"><article class="finding reveal-in"><span>01</span><h3>Keep it simple.</h3><p>If you need a glossary to explain the message, reconsider the message.</p><i>↗</i></article><article class="finding reveal-in"><span>02</span><h3>Get the balance right.</h3><p>Enough substance to be useful. Not so much that the point disappears.</p><i>↗</i></article><article class="finding reveal-in"><span>03</span><h3>Timing matters.</h3><p>A useful message, delivered when someone can still do something with it.</p><i>↗</i></article><article class="finding reveal-in"><span>04</span><h3>Make the next step clear.</h3><p>One thing to understand. One useful thing to do.</p><i>↗</i></article></div><div class="conclusion reveal-in"><p>Sometimes, effective communication is simply about getting the basics right.</p><div class="report-actions"><button id="copy-findings" class="secondary-button">COPY THE FINDINGS <span>↗</span></button><a class="back-top" href="#threshold">RESTART INVESTIGATION ↑</a></div></div><footer><span class="footer-brand">I/U/C <small>© THE INSTITUTE OF UNNECESSARY COMPLEXITY</small></span><p>ANY RESEMBLANCE TO A SERIOUS CONSULTANCY DELIVERABLE IS ENTIRELY DELIBERATE.</p><span>END OF FILE // 001</span></footer></div></section>
+  <main class="main">
+   <section class="view active" id="view-field" aria-label="The field">
+    <div class="hero-typo"><p class="section-label"><span class="tiny-line"></span> CHAPTER 01 / THE OBSERVATION</p><h2>Information is<br><em>everywhere.</em><br>Understanding isn't.</h2><p class="hero-description">Every light in this universe represents a simulated member. Drag to rotate. Scroll to zoom. Tap a light to discover a story. Then send your first transmission and watch the field respond.</p></div>
+    <div class="field-stats" aria-live="polite"><div class="stat-block"><span>POPULATION</span><b id="pop-count">1,440</b><small>synthetic members</small></div><div class="stat-block"><span>SIGNAL REACH</span><b id="field-reach">—</b><small>encountered</small></div><div class="stat-block"><span>MEANINGFUL ACTION</span><b id="field-action">—</b><small>simulated responses</small></div></div>
+    <div class="field-cue"><span class="gesture-symbol">⤧</span> <span>DRAG TO ORBIT<br>SCROLL TO ZOOM<br>SELECT ANY SIGNAL</span></div>
+    <div class="hero-bottomline"><div class="coordinate"><span class="blink-square"></span><span id="coordinates">X +00.000 / Y +00.000 / Z +06.200</span></div><button class="main-cta" id="open-transmission">DESIGN A TRANSMISSION <span>↗</span></button></div>
+   </section>
+   <section class="view" id="view-transmit" aria-label="Transmission designer">
+    <div class="module-panel transmit-panel">
+     <div class="panel-topline"><span>02 / TRANSMISSION ENGINE</span><span>LIVE COMPOSITION</span></div>
+     <div class="panel-scroll">
+      <h2 class="module-title">The message<br><em>is the machine.</em></h2>
+      <p class="module-lead">Write something. The system dissects its language, generates a transmission and sends it through the actual synthetic population. Change the message; change the world.</p>
+      <label class="field-label" for="message-subject">01 / SUBJECT</label>
+      <input class="input" id="message-subject" maxlength="120" value="Important information about your pension benefits">
+      <label class="field-label" for="message-text">02 / MESSAGE</label>
+      <textarea class="input message-input" id="message-text" rows="6" maxlength="2500">In accordance with the provisions of the scheme's governing documentation, members are hereby advised that a comprehensive review of beneficiary nomination arrangements should be undertaken at their earliest convenience to ensure the appropriate designation of prospective recipients of death benefits. Please consult the enclosed explanatory memorandum and visit the portal to explore your options.</textarea>
+      <div class="analysis-readout"><div><span>WORDS</span><b id="words">—</b></div><div><span>LANGUAGE FRICTION</span><b id="friction">—</b></div><div><span>DETECTED ACTIONS</span><b id="actions">—</b></div></div>
+      <button id="refine" class="text-link">↗ RUN THE DE-JARGONISER <span>Rule-based rewrite. No AI or external API.</span></button>
+      <div class="panel-divider"></div>
+      <div class="parameters-head"><span>03 / TRANSMISSION PARAMETERS</span><span id="parameter-presets">RECONFIGURABLE</span></div>
+      <div class="param-row"><label for="channel">CHANNEL</label><select id="channel" class="input select"><option value="email">Email / digital</option><option value="post">Postal letter</option><option value="sms">Text message</option></select></div>
+      <div class="param-row"><label for="timing">ARRIVAL RELATIVE TO DECISION</label><select id="timing" class="input select"><option value="early">Six months before</option><option value="right" selected>Three weeks before</option><option value="late">After the decision</option></select></div>
+      <div class="param-row"><label for="target">TARGET COHORT</label><select id="target" class="input select"><option value="all">Everyone (indiscriminate)</option><option value="relevant">Only members for whom it's relevant</option><option value="retirees">Approaching retirement</option><option value="new">New joiners</option></select></div>
+      <div class="param-row"><label for="noise">COMPETING MESSAGES</label><div class="slider-stack"><input id="noise" type="range" min="0" max="100" value="55"><strong id="noise-out">55%</strong></div></div>
+      <div class="param-row"><label for="urgency">PERCEIVED URGENCY</label><div class="slider-stack"><input id="urgency" type="range" min="0" max="100" value="50"><strong id="urgency-out">50%</strong></div></div>
+     </div>
+     <div class="panel-footer"><button class="transmit-button" id="transmit">TRANSMIT TO 1,440 MINDS <span>↗</span></button><p>Deterministic illustrative simulation. Not actual pension-member behaviour.</p></div>
+    </div>
+    <div class="right-hud"><span class="hud-cross">+</span> SIGNAL ORIGIN / CENTRE OF FIELD <span id="signal-strength">STANDBY</span></div>
+    <div class="center-announcement" id="announcement" aria-live="polite"></div>
+   </section>
+   <section class="view" id="view-observe" aria-label="Observatory">
+    <div class="observatory-intro"><p class="section-label"><span class="tiny-line"></span> CHAPTER 03 / THE CONSEQUENCES</p><h2>Every signal<br>leaves a trace.</h2><p>Run a controlled counterfactual. The same simulated people receive two different messages; only the intervention changes.</p><div class="obs-actions"><button class="small-cta" id="compare">RUN THE COUNTERFACTUAL <span>↗</span></button><button class="line-button" id="replay">↺ REPLAY TRANSMISSION</button></div></div>
+    <div class="observatory-side">
+     <div class="results-head"><span>EXPERIMENT RESULTS</span><span id="results-status">AWAITING TRANSMISSION</span></div>
+     <div class="main-result"><span>MEMBERS TAKING ACTION</span><strong id="result-action">—</strong><small id="result-action-note">Send a message to begin.</small></div>
+     <div class="result-funnel"><div><span>ENCOUNTERED</span><b id="funnel-reach">—</b><i><em id="bar-reach"></em></i></div><div><span>READ</span><b id="funnel-read">—</b><i><em id="bar-read"></em></i></div><div><span>UNDERSTOOD</span><b id="funnel-understand">—</b><i><em id="bar-understand"></em></i></div><div><span>ACTED</span><b id="funnel-action">—</b><i><em id="bar-action"></em></i></div></div>
+     <div class="cohort-title">RESPONSE BY SYNTHETIC COHORT</div><div id="cohort-bars" class="cohort-bars"></div>
+     <div class="comparison-box" id="comparison-box"><div class="comparison-label">COUNTERFACTUAL DELTA</div><div class="comparison-numbers"><span id="compare-a">—</span><strong id="compare-delta">—</strong><span id="compare-b">—</span></div><p id="compare-explain">A controlled comparison uses the same synthetic member population and random seed.</p></div>
+     <div class="export-buttons"><button id="export-png">↓ SAVE POSTER</button><button id="record">● CAPTURE 8s CLIP</button><button id="export-json">↓ EXPORT EXPERIMENT</button><button id="share">↗ COPY EXPERIMENT LINK</button></div>
+    </div>
+    <div class="playback-strip"><span id="playback-state">NO RECORDING</span><div class="playback-track"><span id="playback-progress"></span></div><span id="playback-clock">00:00 / 00:12</span></div>
+   </section>
+   <section class="view" id="view-artefact" aria-label="The artefact">
+    <div class="artefact-screen"><div class="reveal-top"><span><i class="tiny-line"></i> CLASSIFIED / CASE 001</span><span>FINAL DECLASSIFICATION</span></div><div class="artefact-copy"><div class="reveal-index">AFTER 1,440 SIMULATED LIVES, MILLIONS OF CALCULATIONS AND AN EXCESSIVE AMOUNT OF GRAPHICS PROCESSING...</div><h2>The answer<br>was <em>lunch.</em></h2><p>Clear information. Relevant timing. One useful next step.<br>A ham and cheese toastie managed all three without a transformation programme.</p><button id="declassify" class="declassify-btn">DECLASSIFY THE ARTEFACT <span>↗</span></button></div><div class="artefact-image" id="artefact-image" role="img" aria-label="A beautifully photographed ham and cheese toastie"></div><div class="artefact-bottom"><span>SUBJECT: A HAM & CHEESE TOASTIE</span><span>OUTCOME: LUNCH RECLASSIFIED AS THOUGHT LEADERSHIP</span></div></div>
+    <div class="reveal-epilogue" id="epilogue"><span>CASE FILE / CONCLUSION</span><p>Perhaps the real innovation was understanding when to stop innovating.</p><div><button id="restart">↺ CONDUCT ANOTHER EXPERIMENT</button><button id="poster">↓ COMMEMORATE THIS NONSENSE</button></div></div>
+   </section>
   </main>
-  <div class="toast" id="feedback" role="status" aria-live="polite"></div>
+  <div class="inspector" id="inspector" aria-live="polite"><div class="inspector-head"><span>INDIVIDUAL SIGNAL / <b id="inspect-id">—</b></span><button id="close-inspector" aria-label="Close member details">×</button></div><div class="inspector-content"><div class="inspector-avatar"><span id="inspect-glyph">◌</span></div><h3 id="inspect-title">A simulated life.</h3><p id="inspect-description"></p><div class="inspect-grid"><span>SEGMENT</span><b id="inspect-segment">—</b><span>STATE</span><b id="inspect-state">—</b><span>EXPLANATION</span><b id="inspect-reason">—</b></div><small>This is a generated archetype, not an actual person.</small></div></div>
+  <div class="notice" id="notice" role="status"></div>
+  <div class="modal" id="guide" hidden><div class="modal-scrim" data-close="guide"></div><div class="modal-card"><div class="modal-head"><span>FIELD MANUAL / v04</span><button data-close="guide">×</button></div><h2>You're not watching<br><em>the experiment.</em><br>You're running it.</h2><p>Orbit and zoom the simulated member universe, select individual lights, change the language and context of a message, and transmit it. Watch members change state as the signal reaches them. The Observatory lets you compare two interventions on exactly the same synthetic population. The Artefact is best left until the end.</p><div class="modal-grid"><div><b>POINTER / TOUCH</b><span>Drag to orbit · pinch or wheel to zoom · tap a light to inspect.</span></div><div><b>KEYBOARD</b><span>1–4 navigate · / opens commands · Esc closes panels.</span></div><div><b>WHAT'S REAL?</b><span>The text analysis, simulation, state transitions and export calculations run locally in JavaScript. No analytics or personal data is transmitted.</span></div><div><b>WHAT ISN'T?</b><span>These are fictional archetypes, not validated behavioural predictions. No real members, pensions or ML models are involved.</span></div></div><button class="small-cta" data-close="guide">UNDERSTOOD ↗</button></div></div>
+  <div class="modal" id="commands" hidden><div class="modal-scrim" data-close="commands"></div><div class="command-card"><input id="command-search" aria-label="Search commands" placeholder="Where do you want to go?" autocomplete="off"><div id="command-items"></div><span>ESC TO DISMISS · ENTER TO OPEN</span></div></div>
+ </div>
 </body>
 </html>
